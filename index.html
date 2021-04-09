@@ -159,7 +159,7 @@
                 }
             }
         </style>
-        <div class="loader">倩宝专属导航</div>
+<!---        <div class="loader">倩宝专属导航</div>--->
     </div>
     <div class="page-container">
 
@@ -256,20 +256,21 @@
                 <div class="border-top py-2 border-color">
                     <div class="flex-bottom">
                         <ul>
-                            <li id="menu-item-237"
+<!---                            
+														<li id="menu-item-237"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237 sidebar-item">
                                 <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=China@qq.com" target="_blank">
                                     <i class="io io-tijiao icon-fw icon-lg mr-2"></i>
                                     <span>网站提交</span></a>
                             </li>
 
-                            <li id="menu-item-213"
+                           <li id="menu-item-213"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-213 sidebar-item">
                                 <a target="_blank" rel="noopener" href="index1.html">
                                     <i class="fa fa-heart icon-fw icon-lg mr-2"></i>
                                     <span>关于导航</span></a>
                             </li>
-
+--->
                         </ul>
                     </div>
                 </div>
@@ -308,11 +309,14 @@
                                             <i class="fa fa-home fa-lg mr-2"></i>
                                             <span>首页</span></a>
                                     </li>
+                                    <!---
                                     <li id="menu-item-786"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-786"><a
                                             target="_blank" rel="noopener" href="javascript:;">
                                             <i class="fa fa-flag fa-lg mr-2"></i>
                                             <span>日志</span></a></li>
+                                            	--->
+                                    <!---   	
                                     <li id="menu-item-284"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-284">
                                         <a href="about.html">
@@ -329,7 +333,7 @@
                                             </li>
                                         </ul>
                                     </li>
-
+																		--->
                                 </ul>
                                 <div class="rounded-circle weather">
                                     <div id="he-plugin-simple" style="display: contents;"></div>
@@ -373,7 +377,8 @@
                                           })
                                           .catch(console.error)
                                     </script>                           
-                                    <div id="hitokoto"><a href="#" target="_blank" id="hitokoto_text">我爱你，洛千婷</a></div>
+                                 <!---   <div id="hitokoto"><a href="#" target="_blank" id="hitokoto_text">我爱你，洛千婷</a></div>--->
+                                    
                                 </li>
                                 <!-- 一言 end -->
                                 <li class="nav-search ml-3 ml-md-4">
@@ -550,6 +555,8 @@
                         </div>
                     </div>
                 </div>
+                
+                <!---
                 <div class="bulletin-big mx-3 mx-md-0">
                     <div id="bulletin_box" class="card my-2">
                         <div class="card-body py-1 px-2 px-md-3 d-flex flex-fill text-xs text-muted">
@@ -571,57 +578,11 @@
                         </div>
                     </div>
                 </div>
+                
+                --->
+                
             </div>
             <div id="content" class="content-site customize-site">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1663,12 +1624,12 @@
                         rel="search" one-link-mark="yes">
                         <i class="iconfont icon-search"></i>
                     </a>
-                    <a href="http://sighttp.qq.com/authd?IDKEY=7a6ef4c847ab2e9643c7b9e6fad646a17e3198a37984251d" class="btn rounded-circle kefu m-1" target="_blank" data-toggle="tooltip" data-placement="left" title="联系所长">
+<!----                    <a href="http://sighttp.qq.com/authd?IDKEY=7a6ef4c847ab2e9643c7b9e6fad646a17e3198a37984251d" class="btn rounded-circle kefu m-1" target="_blank" data-toggle="tooltip" data-placement="left" title="联系所长">
                         <i class="mode-ico iconfont icon-qq"></i>
-                    </a>
+                    </a>    --->
                     <!-- 右下角搜索 end -->
                     
-                    <a href="javascript:" onclick="window.location.href='javascript:switchNightMode()'" class="btn rounded-circle switch-dark-mode m-1" id="yejian"
+                    <a href="javascript:" onclick="window.location.href='javascript:switchNightMode()'"  target="_self" class="btn rounded-circle switch-dark-mode m-1" id="yejian"
                         data-toggle="tooltip" data-placement="left" title="夜间模式">
                         <i class="mode-ico iconfont icon-light"></i>
                     </a>
@@ -1946,7 +1907,7 @@ var theme = {"ajaxurl":"https:\/\/nav.iowen.cn\/wp-admin\/admin-ajax.php","addic
     //夜间模式
     (function(){
     if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
-        if(new Date().getHours() > 22 || new Date().getHours() < 6){
+        if(new Date().getHours() > 16 || new Date().getHours() < 6){
             document.body.classList.remove('io-black-mode');
             document.body.classList.add('io-grey-mode');
             document.cookie = "night=1;path=/";
@@ -1972,15 +1933,15 @@ function switchNightMode(){
         document.body.classList.remove('io-grey-mode');
         document.body.classList.add('io-black-mode');
         document.cookie = "night=1;path=/"
-        console.log(' ');
+        console.log('夜间模式开启 ');    
         $(".switch-dark-mode").attr("data-original-title","日间模式");
         $(".mode-ico").removeClass("icon-night");
-        $(".mode-ico").addClass("icon-light");
+        $(".mode-ico").addClass("icon-light");          
     }else{
         document.body.classList.remove('io-black-mode');
         document.body.classList.add('io-grey-mode');
         document.cookie = "night=0;path=/"
-        console.log(' ');
+        console.log('夜间模式关闭 ');
         $(".switch-dark-mode").attr("data-original-title","夜间模式");
         $(".mode-ico").removeClass("icon-light");
         $(".mode-ico").addClass("icon-night");
